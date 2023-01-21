@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="601.0" style="-fx-background-color: #3C3F41;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zarzadzanie_firma_logistyczna.AddCustomerController">
+   <children>
+      <TextField fx:id="nameField" layoutX="145.0" layoutY="94.0" />
+      <TextField fx:id="cityField" layoutX="145.0" layoutY="153.0" />
+      <TextField fx:id="addressField" layoutX="145.0" layoutY="213.0" />
+      <TextField fx:id="emailField" layoutX="306.0" layoutY="94.0" />
+      <TextField fx:id="phoneField" layoutX="306.0" layoutY="153.0" />
+      <TextField fx:id="nipField" layoutX="306.0" layoutY="213.0" />
+      <Label layoutX="67.0" layoutY="94.0" text="Nazwa" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="152.0" text="Miasto" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="212.0" text="Adres" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="469.0" layoutY="93.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="469.0" layoutY="152.0" text="Numer telefonu" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="474.0" layoutY="212.0" text=" NIP" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="addButon" layoutX="225.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #007BFF;" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zarzadzanie_firma_logistyczna.HelloController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="1080.0" style="-fx-background-color: #333333;">
+         <children>
+            <Label layoutX="237.0" layoutY="31.0" text="Aplikacja do zarządzania firmą logistyczną" textFill="#0400ff">
+               <font>
+                  <Font name="Times New Roman" size="35.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="14.0" layoutY="6.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="440.0" prefWidth="1080.0" style="-fx-background-color: #3C3F41;">
+         <children>
+            <Button fx:id="button" layoutX="464.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="152.0" style="-fx-background-color: #007BFF;" text="Wejdź" textFill="WHITE">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+            <Label fx:id="connectionStatusLabel" layoutX="616.0" layoutY="375.0" text="Połączenie z bazą danych:" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

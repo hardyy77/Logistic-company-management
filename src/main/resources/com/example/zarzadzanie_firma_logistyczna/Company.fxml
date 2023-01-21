@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zarzadzanie_firma_logistyczna.CompanyController">
+   <children>
+      <AnchorPane prefHeight="150.0" prefWidth="1600.0" style="-fx-background-color: #333333;">
+         <children>
+            <Label layoutX="610.0" layoutY="46.0" text="Zarządzanie firmą" textFill="#2600ff">
+               <font>
+                  <Font name="Times New Roman" size="52.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="14.0" layoutY="15.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backButton" layoutX="1385.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #007BFF;" text="Wróć" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <GridPane prefHeight="752.0" prefWidth="1600.0" style="-fx-background-color: #3C3F41;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="356.0" prefWidth="800.0" style="-fx-border-color: #007BFF;">
+               <children>
+                  <Label layoutX="232.0" layoutY="126.0" text="Wydatki firmowe" textFill="#0900ff">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #007BFF;" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="feeTable" layoutX="14.0" layoutY="1.0" prefHeight="250.0" prefWidth="775.0">
+                    <columns>
+                      <TableColumn fx:id="feeColumn" prefWidth="44.0" text="fee_ID" />
+                      <TableColumn fx:id="electricColumn" prefWidth="59.0" text="Prad" />
+                        <TableColumn fx:id="internetColumn" prefWidth="60.0" text="Internet" />
+                        <TableColumn fx:id="insuranceColumn" prefWidth="89.0" text="Ubezpieczenia" />
+                        <TableColumn fx:id="salaryColumn" prefWidth="42.0" text="Pensje" />
+                        <TableColumn fx:id="softwareColumn" prefWidth="110.0" text="Oprogramowanie" />
+                        <TableColumn fx:id="trainingsColumn" prefWidth="61.0" text="Szkolenia" />
+                        <TableColumn fx:id="marketingColumn" prefWidth="67.0" text="Marketing" />
+                        <TableColumn fx:id="fuelColumn" prefWidth="44.0" text="Paliwo" />
+                        <TableColumn fx:id="dataColumn" prefWidth="194.0" text="Data" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #007BFF;" GridPane.rowIndex="2" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #007BFF;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="trackTable" layoutX="13.0" prefHeight="250.0" prefWidth="775.0">
+                    <columns>
+                      <TableColumn fx:id="trackColumn" prefWidth="61.0" text="Track_ID" />
+                      <TableColumn fx:id="dateColumn" prefWidth="109.0" text="Data_rozpoczecia" />
+                        <TableColumn fx:id="orderColumn" prefWidth="55.0" text="Order_ID" />
+                        <TableColumn fx:id="lenghtColumn" prefWidth="75.0" text="Dlugosc" />
+                        <TableColumn fx:id="weatherColumn" prefWidth="141.0" text="Przewidywana_pogoda" />
+                        <TableColumn fx:id="asphaltColumn" prefWidth="122.0" text="sredni_stan_asfaltu" />
+                        <TableColumn fx:id="startColumn" prefWidth="97.0" text="Punkt_startowy" />
+                        <TableColumn fx:id="endColumn" prefWidth="113.0" text="Punkt_docelowy" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #007BFF;" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="259.0" layoutY="126.0" text="Szczegóły tras" textFill="BLUE">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="251.0" prefWidth="800.0" style="-fx-border-color: #007BFF;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label layoutX="29.0" layoutY="155.0" text="Długość trasy" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dateField" layoutX="14.0" layoutY="41.0" />
+                  <TextField fx:id="orderField" layoutX="14.0" layoutY="113.0" />
+                  <TextField fx:id="lenghtField" layoutX="14.0" layoutY="187.0" />
+                  <TextField fx:id="weatherField" layoutX="251.0" layoutY="41.0" />
+                  <TextField fx:id="asphaltField" layoutX="251.0" layoutY="113.0" />
+                  <TextField fx:id="startField" layoutX="251.0" layoutY="187.0" />
+                  <TextField fx:id="endField" layoutX="494.0" layoutY="41.0" />
+                  <Button fx:id="addButton" layoutX="494.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #007BFF;" text="Dodaj" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="68.0" layoutY="8.0" text="Data" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="81.0" text="ID zamówienia" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="8.0" text="Przewidywana pogoda" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="274.0" layoutY="81.0" text="Stan asfaltu" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="155.0" text="Punkt startowy" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="499.0" layoutY="8.0" text="Punkt docelowy" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
